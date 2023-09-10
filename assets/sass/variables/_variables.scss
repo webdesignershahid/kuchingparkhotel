@@ -1,0 +1,27 @@
+:root {
+    --color__black:                  #000000;
+    --color__white:                  #FFFFFF;
+    --color__green:                  #1BA9B0;
+    --color__gray:                   #728A8A;
+    --color__lime:                   #CED5D6;
+
+    // Font Family
+    --font-primary : 'Adoha';
+    --font-secondary : 'Netflix Sans';
+    --font-jost : 'Jost';
+
+    // Font sizes
+    --base__font-size: 1.125rem;
+    --heading__one: 4.375rem;
+    --heading__two: 3.75rem;
+    --heading__three: 3.125;
+    --heading__four: 2.5rem;
+    --heading__five: 1.875rem;
+    --heading__six: 1.25rem;
+    
+    // line Height
+    --font__line-height-body: 2;
+    --font__line-height-heading: 1.24;
+    --font__line-height-paragraph: 2;
+}    
+

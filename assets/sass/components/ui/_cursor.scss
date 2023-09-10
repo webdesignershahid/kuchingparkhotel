@@ -1,0 +1,52 @@
+
+
+/*==========================================================================
+Custom Cursor
+========================================================================== */
+.custom__cursor-one {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 2px solid var(--color__green);
+    transition: all 200ms ease-out;
+    position: fixed;
+    pointer-events: none;
+    left: 0;
+    top: 0;
+    transform: translate(calc(-50% + 5px), -50%);
+    z-index: 999999;
+
+	@include max-md {
+		display: none;
+	}
+	&.main {
+		border-color: var(--color__green);
+	}
+}
+.custom__cursor-two {
+    width: 6px;
+    height: 6px;
+    border-radius: 100%;
+    background: var(--color__green);
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: width .3s, height .3s, opacity .3s;
+    z-index: 999999;
+	@include max-md {
+		display: none;
+	}         
+	&.main {
+		background: var(--color__green);
+	}
+}
+.custom__cursor__hover {
+    background: var(--color__green);
+    opacity: 0.2;
+    width: 70px;
+    height: 70px;
+	&.main {
+		background: var(--color__green);
+		opacity: 0.4;
+	}
+}

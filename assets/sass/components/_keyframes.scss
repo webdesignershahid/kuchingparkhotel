@@ -1,0 +1,60 @@
+@keyframes pulse-border {
+	0% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+		opacity: 1;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	}
+	100% {
+		-webkit-transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+		opacity: 0;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	}
+}
+
+@-webkit-keyframes preloader {
+	0% { 
+		border-width: 2px; 
+	}
+	100% { 
+		border-width: 50px; 
+		opacity: 0; 
+	}
+}
+@-moz-keyframes preloader {
+	0% { 
+		border-width:2px 
+	}
+	100% { 
+		border-width: 50px; 
+		opacity: 0;
+	}
+}
+@-ms-keyframes preloader {
+	0% { 
+		border-width:2px 
+	}
+	100% { 
+		border-width: 50px;
+		opacity: 0; 
+	}
+}
+@-o-keyframes preloader {
+	0% { 
+		border-width: 2px; 
+	}
+	100% { 
+		border-width: 50px; 
+		opacity: 0;
+	}
+}
+@keyframes preloader {
+	0% { 
+		border-width: 2px; 
+	}
+	100% {
+		border-width: 50px; 
+		opacity: 0;
+	}
+}

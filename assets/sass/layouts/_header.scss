@@ -1,0 +1,243 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1024;
+    padding: 15px 0 ;
+    background-color: var(--color__white);
+    transition: all 0.3s ease-out 0s;
+    
+    @include xl-devices {
+        padding: 30px 0;
+    }
+
+    .brand {
+        max-width: 200px;
+
+        @media (min-width: 1360px){
+            max-width: 250px;
+        }
+    }
+    .nav-menu {
+        a {
+            display: inline-block;
+            color: var(--color__gray);
+            font-size: 17px;
+            font-weight: 300;
+            margin: 0 5px;
+            position: relative;
+            transition: all 0.3s ease-out 0s;
+
+            @media (min-width: 1360px) {
+                font-size: 18px;
+                margin: 0 8px;
+            }
+            @include xxl-devices {
+                margin: 0 10px;
+            }
+            @media (min-width: 1760px) {
+                font-size: 20px;
+                margin: 0 15px;
+            }
+
+            &::after {
+                content: '';
+                width: 0;
+                height: 2px;
+                background-color: var(--color__green);
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                transition: all 0.3s ease-out 0s;
+            }
+            &.active {
+                color: var(--color__green);
+                font-weight: 500;
+                &::after {
+                    content: '';
+                    width: 100%;
+                    height: 2px;
+                    background-color: var(--color__green);
+                    position: absolute;
+                    bottom: -5px;
+                    left: 0;
+                    transition: all 0.3s ease-out 0s;
+                }
+            }
+            &:hover {
+                color: var(--color__green);
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .navbar-right {
+        @include max-lg {
+            margin-left: auto;
+        }
+        .language {
+            margin-right: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 15px;
+                
+                @include xl-devices {
+                    font-size: 16px;
+                }
+                @include xl-devices {
+                    font-size: 18px;
+                }                
+                span {
+                    line-height: 1;
+                    font-weight: 500;
+                    margin-left: 10px;
+                }
+            }
+            > a {
+                &::after {
+                    content: '\f0d7';
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 600;
+                    margin-left: 8px;
+                    font-size: 14px;
+                }
+            }
+            .submenu {
+                background-color: var(--color__white);
+                width: 130px;
+                z-index: 9;
+                li {
+                    margin: 10px 0;
+
+                    a {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .btn-theme {
+            padding: 12px 20px;
+            font-size: 16px;
+
+            @include xxl-devices {
+                padding: 18px 30px;
+                font-size: 18px;
+            }
+        }
+    }
+    .sidebar-toggler {
+        height: 30px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 3px;
+        margin-left: 25px;
+        span {
+            width: 35px;
+            height: 2px;
+            display: block;
+            background-color: var(--color__black);
+
+            & + span {
+                margin-top: 8px;
+            }
+        }
+    }
+    &.sticky {
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.04);
+    }
+
+    
+    .sidebar-mobile {
+        position: fixed;
+        top: 75px;
+        right: -280px;
+        bottom: 0;
+        width: 280px;
+        background-color: #fff;
+        box-shadow: 0 4px 5px 0 rgba(#003764, 0.1);
+        overflow-y: scroll;
+        transition: all 0.3s ease-out 0s;
+        z-index: 1023;
+
+        @include md-devices {
+            top: 80px;
+            width: 400px;
+            right: -400px;
+        }
+
+        @include xl-devices {
+            display: none;
+        }
+        .logo-wrap  {
+            padding: 25px 30px;
+            img {
+                max-width: 150px;
+                margin: 0 auto;
+            }
+        }
+        .menu {
+            margin: 30px 25px;
+            h6 {
+                border-bottom: 1px solid var(--color__green);
+                color: var(--color__black);
+                font-weight: 500;
+                margin-bottom: 15px;
+                padding-bottom: 5px;
+                font-size: 20px;
+            }
+            a {
+                display: block;
+                color: var(--color__gray);
+                padding: 3px 0;
+                font-weight: 300;
+                font-size: 1rem;
+            }
+
+        }
+        .social-icons {
+            margin: 30px 25px;
+            h6 {
+                border-bottom: 1px solid var(--color__green);
+                color: var(--color__black);
+                font-weight: 500;
+                margin-bottom: 20px;
+                padding-bottom: 5px;
+                font-size: 20px;
+            }
+            ul {
+                gap: 15px;
+                display: flex;
+                align-items: center;
+                li {
+                    a {
+                        width: 35px;
+                        height: 35px;
+                        border: 1px solid var(--color__gray);
+                        @include flex-center;
+                        font-size: 16px;
+                        color: var(--color__black);
+                        transition: all 0.3s;
+
+                        &:hover {
+                            background-color: var(--color__green);
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.is-menu-open {
+            right: 0;
+        }
+
+    }
+}

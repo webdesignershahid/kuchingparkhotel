@@ -1,0 +1,126 @@
+/*--------------------------------------------------------------
+# Footer-block
+--------------------------------------------------------------*/
+footer {
+    padding: 60px 0 70px;
+    overflow: hidden;
+    .container {
+        border-bottom: 1px solid rgba(#928089, 0.4);
+        padding-bottom: 55px;
+
+
+    }
+
+    .left-widget {
+        h5 {
+            margin-bottom: 10px;
+            font-size: 32px;            
+        }
+        p {
+           font-weight: 300;
+           color: rgba(#fff, 0.5);
+           margin-bottom: 10px;
+
+           @include xl-devices {
+            font-size: 1rem;
+        }
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            
+            @include lg-devices {
+                max-width: 670px;
+                margin: 0;
+            }
+
+            .form-group {
+                position: relative;
+                background-color: rgba(#fff, .04);
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 8px;
+                border-radius: 4px;
+                gap: 0 15px;
+
+                @include lg-devices {
+                    padding: 12px;
+                }
+                input {
+                    background-color: transparent;
+                    border: 0;
+                    border-radius: 0;
+                    flex: 1;
+                    padding: 0;
+                    color: rgba(#fff, .5);
+                    font-family: var(--font-secondary);
+                    font-weight: 300;
+                }
+                i {
+                    color: #5B5B5B;
+                    margin-left: 13px;
+                    font-size: 18px;
+                }
+                button {
+                    background-color: var(--color__green);
+                    border-radius: 4px;
+                    color: var(--color__white);
+                    padding: 8px 18px;
+                    font-family: var(--font-jost);
+                    font-size: 14px;
+                    line-height: 26px;
+                    border: 0;
+                    @include lg-devices {
+                        font-size: 16px;
+                        padding: 10px 25px;
+                    }
+                    @include xl-devices {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .right-widget {
+        p {
+            color: rgba(#fff, .5);
+            margin-bottom: 5px;
+            font-weight: 300;
+            @include xl-devices {
+                font-size: 1rem;
+            }
+        }
+
+        ul {
+            gap: 0 15px;
+            margin: 10px 0;
+
+            @include lg-devices {
+                margin: 16px 0 25px;
+            }
+            @include xl-devices {
+                margin: 10px 0 40px;
+            }
+        }
+        .social-media {
+            a {
+                font-size: 18px;
+
+                @include lg-devices {
+                    font-size: 20px;
+                }
+                @include xl-devices {
+                    font-size: 24px;
+                }
+                & + a {
+                    margin-left: 35px;
+                }
+
+                &:hover {
+                    color: var(--color__green);
+                }
+            }
+        }
+    }
+}

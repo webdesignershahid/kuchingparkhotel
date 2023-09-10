@@ -1,0 +1,178 @@
+.location-wrapper {
+    .map-wrapper {
+        overflow: hidden;
+        margin: 100px 0;
+        @include xl-devices {
+            margin: 120px 0;
+        }
+
+        iframe {
+            filter: grayscale(1);
+            height: 400px;
+            @include xl-devices {
+                height: 500px;
+            }
+            @include xxl-devices {
+                height: 600px;
+            }
+        }
+    }
+
+    .nearby-location {
+        overflow: hidden;
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+
+            @include xl-devices {
+                margin-bottom: 40px;
+            }
+        }
+
+        .location-item {
+            .thumbnail {
+                border-radius: 5px;
+                overflow: hidden;
+
+                img {
+                    transition: all 0.3s ease-out 0s;
+                }
+            }
+            .details {
+                padding: 20px 0 0;
+                
+                @include sm-devices {
+                    padding: 20px 0 10px;
+                }
+                @include xl-devices {
+                    padding: 30px 0 0;
+                }
+
+                h6 {
+                    margin-bottom: 8px;
+                    font-size: 1.25rem;
+
+                    @include md-devices {
+                        font-size: 1.35rem;
+                    }
+                    @include xl-devices {
+                        font-size: 1.5rem;
+                    }                    
+                    a {
+                        transition: all 0.3s;
+                    }
+                    &:hover {
+                        a {
+                            color: var(--color__green);
+                        }
+                    }
+                }
+                p {
+                    line-height: 1;
+                    font-weight: 300;
+
+                    strong {
+                        color: var(--color__black);
+                    }
+                }
+            }
+
+            &:hover {
+                .thumbnail {
+                    img {
+                        transform: scale(1.1) rotate(3deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .travel-method {
+        overflow: hidden;
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .item {
+            .thumbnail {
+                min-height: 300px;
+                padding: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #F3F5F7;
+                border-radius: 8px;
+                overflow: hidden;
+
+                @media (min-width: 1300px) {
+                    min-height: 360px;
+                }
+                @media (min-width: 1700px) {
+                    min-height: 415px;
+                }
+
+                img {
+                    transition: all 0.3s ease-out 0s;
+                }
+            }
+            .details {
+                padding: 20px 15px 0;
+                
+                @media (min-width: 1300px) {
+                    padding: 25px 15px 0;
+                }
+                
+                @include xxl-devices {
+                    padding: 30px 50px 0;
+                }
+
+                h5 {
+                    margin-bottom: 5px;
+                    font-size: 1.5rem;
+                    line-height: 1.45;
+
+                    @include xl-devices {
+                        font-size: 1.875rem;
+                    }
+                    @include xxl-devices {
+                        font-size: 2.25rem;
+                    }
+                }
+                p {
+                    @include xl-devices {
+                        font-size: 1rem;
+                        line-height: 1.9;
+                    }
+                }
+                .button {
+                    margin-top: 20px;
+
+                    @include xxl-devices {
+                        margin: 35px;
+                    }
+                }
+            }
+            &:hover {
+                .thumbnail {
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,922 @@
+// Hero Section
+.hero {
+    .hero-slide {
+        padding: 130px 15px 275px 20px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+
+        @include sm-devices {
+            padding: 160px 30px 275px 40px;
+        }
+        @include lg-devices {
+            padding: 190px 0 320px 100px;
+        }
+        h1 {
+            max-width: 400px;
+            color: var(--color__white);
+            transition: all 1000ms ease;
+            transform: translateY(80px);
+            opacity: 0;
+            margin-bottom: 8px;
+            line-height: 1.5;
+            @include md-devices {
+                max-width: 500px;
+            }
+            @include lg-devices {
+                max-width: 600px;
+                line-height: 1.6;
+            }
+            @include xxl-devices {
+                line-height: 1.7;
+            }
+        }
+        p {
+            max-width: 400px;
+            color: var(--color__white);
+            font-weight: 300;
+            transition: all 1000ms ease;
+            transform: translateY(80px);
+            opacity: 0;
+            @include md-devices {
+                max-width: 500px;
+            }
+            @include lg-devices {
+                max-width: 600px;
+            }
+        }
+
+        &.swiper-slide-active {
+            h1 {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 1000ms;
+            }
+            p {
+                opacity: 1;
+                transform: translateY(0);
+                transition-delay: 1200ms;
+            }
+        }
+    }
+    .hero-slider {
+        .nagivation-panel {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 130px;
+            backdrop-filter: blur(8px);
+            background-color: rgba(#000, 0.5);
+            padding: 0 30px;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            @include max-lg {
+                display: none;
+            }
+            @media (min-width: 1300px) {
+                bottom: 0;
+            }
+            @media (min-width: 1600px) {
+                padding: 0 40px;
+            }
+            
+            .pagination {
+                color: var(--color__white);
+                display: flex;
+                align-items: end;
+                justify-content: center;
+                gap: 0 2px;
+                margin-bottom: 25px;
+                span {
+                    color: var(--color__white);
+                    font-family: var(--font-primary);
+                    font-size: 20px;
+                    line-height: 1;
+                    transition: all 0.3s ease;
+
+                    &.swiper-pagination-current {
+                        font-size: 32px;
+                    }
+                }
+            }
+
+            .nav-buttons {
+                div {
+                    width: 60px;
+                    height: 60px;
+                    border: 0.5px solid #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+    .hotel-booking-form {
+        margin-top: -132px;
+        position: relative;
+        z-index: 1;
+        max-width: 1200px;
+
+        @include lg-devices {
+            margin-top: -94px;
+        }
+        @include xl-devices {
+            margin-top: -131px;
+        }
+        @media (min-width: 1760px) {
+            max-width: 1460px;
+        }
+    }
+}
+.hotel-booking-form {
+    background-color: var(--color__white);
+    padding: 16px;
+    border: 1px solid var(--color__lime);
+    @include xl-devices {
+        padding: 30px;
+    }
+
+    .form-group {
+        position: relative;
+
+        .form-control {
+            border: 1px solid var(--color__lime);
+            border-radius: 0;
+            height: 60px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: var(--color__gray);
+            font-weight: 300;
+            @include lg-devices {
+                padding: 10px 15px;
+            }
+            @include xl-devices {
+                height: 70px;
+                font-size: 18px;
+            }
+            @include xxl-devices {
+
+            }
+
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .nice-select {
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: var(--color__gray);
+            padding: 10px 20px;
+            @include xl-devices {
+                font-size: 18px;
+            }
+            .list {
+                transform: none;
+            }
+
+        }
+
+        i {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @include lg-devices {
+                right: 10px;
+            }
+            @include xl-devices {
+                right: 20px;
+            }
+        }
+    }
+    .flex-lg-1 {
+        @include lg-devices {
+            flex: 1;
+        }
+    }
+    button.btn-sm {
+        height: 60px;
+
+        @include lg-devices {
+            padding: 18px 13px;
+            font-size: 16px;
+        }
+        @include xl-devices {
+            height: 70px;
+            font-size: 18px;
+        }
+    }
+}
+
+// About Us
+.about-us {
+    margin: 100px 0;
+    
+    @include lg-devices {
+        margin: 130px 0;
+    }
+    @include xl-devices {
+        margin: 150px 0 250px;
+    }
+    @include xxl-devices {
+        margin: 185px 0 300px;
+    }
+    .row.top {
+        align-items: flex-end;
+        .image {
+            @include lg-devices {
+                margin-left: 40px;
+            }
+            @media (min-width: 1360px) {
+                margin-left: 60px;
+            }
+
+            img {
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    height: 400px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                @media (min-width: 1200px) and (max-width: 1399px) {
+                    height: 500px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+                @media (min-width: 1400px) and (max-width: 1779px) {
+                    height: 520px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .section-content {
+            max-width: 730px;
+            padding: 30px 20px 20px 20px;
+            position: relative;
+            z-index: 1;
+
+            @include sm-devices {
+                padding: 40px 40px 30px 40px;
+            }
+            @include lg-devices {
+                padding: 0px 40px 30px 40px;
+                margin-left: -175px;
+                margin-right: 15px;
+            }
+            @include xl-devices {
+                margin-left: -105px;
+            }
+            @include xxl-devices {
+                margin-right: 45px;
+            }
+            @media (min-width: 1760px) {
+               margin-left: -100px;
+               margin-right: 60px;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                top: 25px;
+                background-color: var(--color__white);
+                z-index: -1;
+
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    top: 20px;
+                }
+            }
+
+            h1 {
+                margin-bottom: 12px;
+            }
+
+        }
+    }
+    .row.bottom {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            background-color: #F2F5F5;
+            left: calc(1.5rem * +.5);
+            right: calc(1.5rem * +.5);
+            bottom: 0;
+            height: 380px;
+
+            @include sm-devices {
+                height: 450px;
+            }
+            @media (min-width: 992px) and (max-width: 1199px) {
+                height: 450px;
+                bottom: 90px;
+            }
+            @include xl-devices {
+                height: 630px;
+            }
+            @media (min-width: 1760px) {
+                height: 580px;
+            }
+        }
+        .section-content {
+            padding: 30px 20px 25px 20px;
+            
+            @include sm-devices {
+                padding: 40px;
+            }
+            @include lg-devices {
+                padding: 50px 30px 0 40px;
+            }
+            @media (min-width: 1360px) {
+                padding: 65px 0 55px 75px;                
+            }
+            h4 {
+                margin-bottom: 30px;
+            }
+        }
+        .image {
+            margin: 20px auto 10px;
+            max-width: 350px;
+
+            @include lg-devices {
+                max-width: 100%;
+                margin:  20px 0 0;
+            }
+            @include xl-devices {
+                margin: 20px 0 -100px;
+            }
+        }
+    }
+}
+
+.digital-experience {
+    margin: 100px 0;
+    @include lg-devices {
+        margin: 130px 0;
+    }
+    @include xl-devices {
+        margin: 150px 0;
+    }
+    .home-experience-slider {
+
+        .swiper-slide {
+            img {
+                @media (max-width: 767px) {
+                    height: 250px;
+                    width: 100%;
+                    object-fit: cover;                    
+                }
+                @media (min-width: 768px) and (max-width: 1399px) {
+                    height: 450px;
+                    width: 100%;
+                    object-fit: cover; 
+                }
+                @media (min-width: 1400px) and (max-width: 1779px) {
+                    height: 525px;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .slider-navigation {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-color: #F3F5F7;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            gap: 0 25px;
+            padding: 10px 18px;
+            
+            @include sm-devices {
+                padding: 15px 25px;
+            }
+            @include md-devices {
+                padding: 20px 30px;
+            }
+            @include xl-devices {
+                padding: 24px 38px;
+            }
+
+            svg {
+                max-width: 40px;
+                @include sm-devices {
+                    max-width: 50px;
+                }
+                @include xl-devices {
+                    max-width: 65px;
+                }
+            }
+        }
+    }
+    .experience-names {
+        margin-top: 30px;
+
+        @include md-devices {
+            margin-top: 50px;
+        }
+        @include lg-devices {
+            margin-top: 0;
+        }
+        @include xl-devices {
+            max-width: 425px;
+            margin-left: 30px;
+        }
+        @include xxl-devices {
+            margin-left: 40px;
+            max-width: 560px;
+        }
+        @media (min-width: 1760px) {
+            max-width: 510px;
+            margin-left: 50px;
+        }
+        ul {
+            li {
+                a {
+                    font-family: var(--font-primary);
+                    font-size: 20px;
+                    letter-spacing: 0.8px;
+                    display: block;
+                    border-bottom: 2px solid var(--color__green);
+                    padding-bottom: 8px;
+                    padding-top: 4px;
+                    line-height: 1;
+                    transition: all 0.3s;
+
+                    @include sm-devices {
+                        font-size: 24px;
+                    }
+                    @include md-devices {
+                        font-size: 30px;
+                    }
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        font-size: 22px;
+                    }
+                    @media (min-width: 1200px) and (max-width: 1399px) {
+                        font-size: 25px;
+                    }
+
+                    &:hover {
+                        color: var(--color__green);
+                    }
+                }
+                & + li {
+                    margin-top: 18px;
+
+                    @include sm-devices {
+                        margin-top: 24px;
+                    }
+                    @include md-devices {
+                        margin-top: 30px;
+                    }
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        margin-top: 25px;
+                    }
+                    @media (min-width: 1200px) and (max-width: 1399px) {
+                        margin-top: 22px;
+                    }
+                }
+            }
+        }
+        .button {
+            margin-top: 30px;
+            text-align: center;
+
+            @include sm-devices {
+                margin-top: 40px;
+            }
+            @include lg-devices {
+                text-align: start;
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                margin-top: 35px;
+            }
+        }
+    }
+}
+
+.home-rooms {
+    overflow: hidden;
+    margin: 100px 0;
+    
+    @include sm-devices {
+        margin: 150px 0;
+    }
+    @include xl-devices {
+        margin: 180px 0;                
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+
+        @include sm-devices {
+            padding-top: 50px;
+        }
+        @include xl-devices {
+            padding-top: 80px;                
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: calc(1.5rem * +.5);
+            top: 0;
+            background-color: #EBEFF1;
+            
+            @include max-xsm {
+                display: none;
+            }
+            @include sm-devices {
+                bottom: 200px;
+                width: 290px;
+            }
+            @include lg-devices {
+                bottom: 100px;
+                width: 430px;
+            }
+            @include xl-devices {
+                width: 390px;
+            }
+            @media (min-width: 1760px) {
+                width: 490px;
+            }
+        }
+    }
+    .section-title {
+        margin-bottom: 50px;
+
+        @include sm-devices {
+            padding-left: 40px;
+        }
+        @include lg-devices {
+            padding-left: 60px;
+        }
+        @include xl-devices {
+            padding-left: 80px;
+        }
+        @media (min-width: 1760px) {
+            padding-left: 100px;
+        }
+
+    }
+
+    .slider-navigation {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        gap: 0 15px;
+        transform: translateY(-50%);
+
+        @include sm-devices {
+            gap: 0 70px;
+        }
+        div {
+            position: relative;
+            z-index: 1;
+
+            svg {
+                transition: all 0.3s ease-out 0s;
+                max-width: 50px;
+
+                @include sm-devices {
+                    max-width: 65px;
+                }
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                z-index: -1;
+                background-color: rgba(#1BA9B0, 0.1);
+                transform: translateY(-50%);
+                transition: all 0.3s ease-out 0s;
+
+                @include max-xsm {
+                    display: none;
+                }
+            }
+
+            &.swiper-button-disabled {
+                &::before {
+                    background-color: rgba(#A8A8A8, 0.1);
+                }
+                svg {
+                    fill: #A8A8A8;
+                }
+            }
+
+        }
+
+        .slider_prev {
+            &::before {
+                left: 30px;
+            }
+        }
+        .slider_next {
+            &::before {
+                left: -30px;
+            }
+        }
+    }
+
+    .home_room_slider {
+        @include sm-devices {
+            margin-left: 40px;
+        }
+        @include lg-devices {
+            margin-left: 60px;
+        }
+        @include xl-devices {
+            margin-left: 80px;
+        }
+        @media (min-width: 1760px) {
+            margin-left: 100px;
+        }
+        .room-slider-item {
+            max-width: 400px;
+            margin: 0 auto;
+            @include sm-devices {
+                margin: 0;
+            }
+            @media (min-width: 1760px) {
+                max-width: 100%;
+            }
+            .thumb {
+                position: relative;
+                overflow: hidden;
+                img {
+                    transition: all 0.4s linear 0s;
+                }
+
+                .room-information {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: #EBEFF1;
+                    text-align: center;
+                    padding: 30px 30px 30px;
+                    transition: all 0.3s ease-out 0s;
+                    transform: translateY(60px);
+                    opacity: 0;
+                    visibility: hidden;
+                    
+                    @include md-devices {
+                        padding: 30px 25px 30px;
+                    }
+                    @include lg-devices {
+                        padding: 30px 50px 45px;
+                    }
+                    @include xl-devices {
+                        padding: 30px 25px 30px;
+                    }
+                    @media (min-width: 1760px) {
+                        padding: 30px 50px 45px;                        
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 50%;
+                        height: 3px;
+                        width: 50%;
+                        background-color: var(--color__green);
+                        transform: translateX(-50%);
+                    }
+
+                    h6 {
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                        line-height: 1.5;
+
+                        @include sm-devices {
+                            font-size: 25px;
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .thumb {
+                    img {
+                        transform: scale(1.1);
+                    }
+                    .room-information {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.park-cafe {
+    margin: 100px 0;
+
+    @include lg-devices {
+        margin: 150px 0;
+    }
+    @include xl-devices {
+        margin: 180px 0;
+    }
+    .inner {
+        position: relative;
+        z-index: 1;
+        
+        @include lg-devices {
+            padding: 75px 25px 40px 50px;
+            background-color: #F2F5F5;
+        }
+        @media (min-width: 1760px) {
+            padding: 90px 100px 50px 100px;
+        }
+    }
+
+    .image {
+        @media (min-width: 1200px) and (max-width: 1299px) {
+            margin-bottom: -170px;
+            position: relative;
+            left: -20px;
+        }
+        @media (min-width: 1300px) {
+            margin-bottom: -170px;
+            position: relative;
+            left: -10px;
+        }
+        @media (min-width: 1360px) {
+            left: 0;
+        }
+        img {
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                height: 630px;
+                object-fit: cover;
+            }
+
+            @media (min-width: 1400px) and (max-width: 1759px) {
+                height: 720px;
+                object-fit: cover;
+            }
+        }
+            
+    }
+    .section-text {
+        padding: 0 20px 0 0;
+        @include lg-devices {
+            padding: 0;
+        }
+        @media (min-width: 1360px) {
+            padding: 0 20px;
+        }
+        p {
+            @include lg-devices {
+                font-size: 0.9375rem;
+            }
+            @include xl-devices {
+                font-size: 1rem;
+            }
+            @media (min-width: 1400px) {
+                font-size: 1.125rem;
+            }
+        }
+        h1 {
+            margin-bottom: 20px;
+
+            @include lg-devices {
+                margin-bottom: 10px;
+            }
+        }
+        .button {
+            margin-top: 30px;
+        }
+    }
+}
+
+.home-gallery {
+    margin: 170px 0 100px;
+
+    @include sm-devices {
+        margin: 250px 0 140px;
+    }
+    @include lg-devices {
+        margin: 150px 0;
+    }
+    @include xl-devices {
+        margin: 250px 0 180px;
+    }
+    @media (min-width: 1760px) {
+        margin: 400px 0 180px;
+    }
+    .inner {
+        position: relative;
+        z-index: 1;
+        @include xl-devices {
+            padding: 0 40px 40px;
+        }
+        @media (min-width: 1360px) {
+            padding: 0px 0 60px 60px;
+        }
+        @media (min-width: 1760px) {
+            padding: 95px 0 60px 60px;
+        }
+        
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 85%;
+            z-index: -1;
+            background-color: #EBEFF1;
+            @include max-lg {
+                display: none;
+            }
+            @media (min-width: 1360px) {
+                width: 95%;
+            }
+            @media (min-width: 1760px) {
+                height: 100%;
+            }
+        }
+    }
+    .gallery-inner {
+        position: relative;
+
+        h1 {
+            margin-bottom: -115px;
+
+            @include sm-devices {
+                margin-bottom: -170px;
+            }
+            
+            @include lg-devices {
+                position: absolute;
+                right: -30px;
+                top: 0px;
+                transform: rotate(-90deg);
+                margin: 0;
+            }
+            @media (min-width: 1760px) {
+                right: -10px;
+                top: 40px;
+            }
+        }
+        .gallery-item {
+            overflow: hidden;
+
+            img {
+                transition: all 0.3s linear 0s;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    .image {
+        @media (min-width: 1760px) {
+            margin-left: 50px;
+            margin-top: -225px;
+        }
+    }
+    .text-content {
+        padding: 15px 15px 0;
+
+        @include xl-devices {
+            padding: 20px 30px 0 0;
+        }
+        @media (min-width: 1360px) {
+            max-width: 530px;
+        }
+        @media (min-width: 1760px) {
+            max-width: 650px;
+            margin-left: 50px;
+            padding: 40px 30px 0 0;
+        }
+    }
+}

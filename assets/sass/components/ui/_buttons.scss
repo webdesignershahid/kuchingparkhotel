@@ -1,0 +1,101 @@
+/*-------------------------------------------------
+    [ ## Buttons ]
+-------------------------------------------------*/
+button {
+	transition: all 0.3s ease-out;
+}
+.btn {
+    &:active:focus,
+    &:focus {
+       box-shadow: none;
+    }
+}
+.btn-theme {
+    display: inline-block;
+    color: var(--color__white);
+    background-color: var(--color__green);
+    font-family: var(--font-jost);
+    font-weight: 500;
+    font-size: 0.875rem;
+    border-radius: 0;
+    position: relative;
+    z-index: 1;
+
+    @include sm-devices {
+        font-size: 1rem;
+    }
+    @include md-devices {
+        font-size: 1.125rem;
+    }
+    svg {
+        margin-left: 15px;
+    }
+    &.btn-sm {
+        padding: 18px 30px;
+    }
+    &.btn-lg {
+        padding: 16px 18px;   
+
+        @include xl-devices {
+            padding: 20px 50px;
+        }
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        width: 0;
+        transform: translateX(-50%);
+        background-color: var(--color__black);
+        transition: all 0.3s ease-out 0s;
+        z-index: -1;
+    }
+    &:hover {
+        color: var(--color__white);
+
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
+.topbutton {
+    color: var(--color__white);
+    font-size: 15px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color__green);
+    border-radius: 4px;
+    @include flex-center;
+    z-index: 1024;
+    transition: all 0.3s ease-out 0s;
+    opacity: 0;
+    visibility: hidden;
+    
+    @include xl-devices {
+        bottom: 50px;
+        right: 50px;
+        width: 50px;
+        height: 50px;
+    }
+
+    &.btn-show {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        color: var(--color__white);
+        box-shadow: 0 0 10px 0 rgba(#1BA9B0, 0.5);
+
+        @include xl-devices {
+            width: 55px;
+            height: 55px;
+            font-size: 20px;
+        }
+    }
+}

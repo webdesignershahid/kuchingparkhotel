@@ -1,0 +1,44 @@
+
+@font-face {
+    font-family: 'Adoha';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Adoha'), url('Adoha-axGVJ.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-Medium.woff2') format('woff2'),
+        url('Jost-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('NetflixSans-Medium.woff2') format('woff2'),
+        url('NetflixSans-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('NetflixSans-Light.woff2') format('woff2'),
+        url('NetflixSans-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Netflix Sans';
+    src: url('NetflixSans-Regular.woff2') format('woff2'),
+        url('NetflixSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

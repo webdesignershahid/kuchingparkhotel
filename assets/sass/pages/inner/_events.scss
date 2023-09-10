@@ -1,0 +1,295 @@
+.events {
+
+    .events-item {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xxl-devices {
+            margin: 180px 0;
+        }
+        @media (min-width: 1760px) {
+            margin: 260px 0 180px;
+        }
+
+        &.wedding {
+            .image-group {
+                .img1 {
+                    @include xxl-devices {
+                        margin-bottom: -130px;
+                    }
+                }
+                .img2 {
+                    @include xxl-devices {
+                        margin-top: -30px;
+                    }
+                }
+            }
+            .text-content {
+                background-color: #F3F5F7;
+                padding: 30px;
+                margin-top: 20px;
+                
+                @media (min-width: 1760px) {
+                    padding: 50px 35px 60px 45px;
+                }
+
+                h1 {
+                    margin-bottom: 15px;
+                    @include sm-devices {
+                        font-size: 2.5rem;
+                    }
+                    @include lg-devices {
+                        font-size: 3.4rem;
+                    }
+                    @include xxl-devices {
+                        font-size: 3.5rem;
+                    }
+                    @media (min-width: 1760px) {
+                        font-size: var(--heading__one);
+                    }
+                }
+                .button {
+                    margin-top: 30px;
+                    
+                    @include xxl-devices {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+
+        &.conferences {
+            margin: 100px 0;
+        
+            @include md-devices {
+                margin: 150px 0;
+            }
+            @include xxl-devices {
+                margin: 180px 0;
+            }
+
+            .text-content {
+                position: relative;
+                z-index: 1;
+                padding: 30px;
+
+                @media (min-width: 1300px) {
+                    padding: 0 40px 40px 40px;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    bottom: 55px;
+                    right: 0;
+                    background-color: #F3F5F7;
+                    z-index: -1;
+                    @include lg-devices {
+                        bottom: -60px;
+                        top: 75px;
+                    }
+                    @media (min-width: 1300px) {
+                        top: 45px;
+                    }
+                    @media (min-width: 1760px) {
+                        top: 60px;
+                    }
+                }
+
+                h1 {
+                    margin-bottom: 15px;
+                    @include sm-devices {
+                        font-size: 2.5rem;
+                    }
+                    @include lg-devices {
+                        font-size: 3.4rem;
+                        white-space: nowrap;
+                    }
+                    @include xxl-devices {
+                        font-size: 3.5rem;
+                    }
+                    @media (min-width: 1760px) {
+                        font-size: var(--heading__one);
+                    }
+                }
+                p {
+                    max-width: 720px;
+                }
+                .button {
+                    margin-top: 30px;
+                    @include xl-devices {
+                        margin-top: 50px;
+                    }
+                }
+            }
+
+            .image-group {
+                position: relative;
+                z-index: 1;
+                margin-top: -250px;
+
+                @include xl-devices {
+                    margin-top: -325px;
+                }
+                @include xxl-devices {
+                    margin-top: -350px;
+                }
+                .img-1 {
+                    margin-top: 170px;
+                    @include xl-devices {
+                        margin-top: 210px;
+                    }
+                }
+                .img-3 {
+                    margin-top: 50px;
+                }
+
+                @include max-md {
+                    display: none;
+                }
+            }
+        }
+
+        &.seminar {
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 100px;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background-color: #F3F5F7;
+                z-index: -1;
+
+                @include lg-devices {
+                    top: 65px;
+                }
+                @include xl-devices {
+                    top: 60px;
+                }
+                @media (min-width: 1760px) {
+                    top: 75px;
+                }
+            }
+            .image-group {
+
+                @media (min-width: 1760px) {
+                    margin-right: 125px;
+                    margin-top: -100px;
+                }
+                .img-2 {
+                    @include lg-devices {
+                        position: relative;
+                        left: -10px;
+                        top: -60px;
+                    }
+                    @include xxl-devices {
+                        left: -20px;
+                    }
+                }
+                .img-3 {
+                    @include lg-devices {
+                        position: relative;
+                        top: 15px;
+                    }
+                    @include xxl-devices {
+                        top: 20px;
+                    }
+                }
+            }
+            .text-content {
+                padding: 10px 20px 30px;
+                @include sm-devices {
+                    padding: 15px 30px 30px;
+                }
+                @include md-devices {
+                    padding: 20px 40px 40px;
+                }
+                @include lg-devices {
+                    padding: 0 40px 40px 30px;
+                }
+                @include xl-devices {
+                    padding: 0 40px 60px 30px;
+                }
+                @include xxl-devices {
+                    padding: 0 50px 100px 30px;
+                }
+                @media (min-width: 1760px) {
+                    padding: 0 130px 90px 0px;
+                }
+                h1 {
+                    margin-bottom: 10px;
+                    @include sm-devices {
+                        font-size: 2.5rem;
+                    }
+                    @include lg-devices {
+                        font-size: 3.4rem;
+                    }
+                    @include xxl-devices {
+                        font-size: 3.5rem;
+                        margin-bottom: 20px;
+                    }
+                    @media (min-width: 1760px) {
+                        font-size: var(--heading__one);
+                    }
+                }
+                .button {
+                    margin-top: 30px;
+                    @include xxl-devices {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+        &.corporate-dinner {
+            margin: 100px 0;
+        
+            @include md-devices {
+                margin: 150px 0;
+            }
+            @include xxl-devices {
+                margin: 180px 0;
+            }
+            .text-content {
+                @media (min-width: 1360px) {
+                    padding-right: 80px;
+                }
+                @media (min-width: 1760px) {
+                    padding-right: 150px;
+                }
+                h1 {
+                    margin-bottom: 30px;
+                    @include sm-devices {
+                        font-size: 2.5rem;
+                    }
+                    @include lg-devices {
+                        font-size: 3.4rem;
+                    }
+                    @include xxl-devices {
+                        font-size: 3.5rem;
+                    }
+                    @media (min-width: 1760px) {
+                        font-size: var(--heading__one);
+                        margin-bottom: 50px;
+                    }
+                }
+                .button {
+                    margin-top: 30px;
+                    @include lg-devices {
+                        margin-top: 40px;
+                    }
+                    @include xxl-devices {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+}

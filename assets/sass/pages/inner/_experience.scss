@@ -1,0 +1,381 @@
+.experience-wrapper {
+    .smart-check-in {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+        .image {
+            height: 100%;
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .text {
+            background-color: #F3F5F7;
+            padding: 30px 30px;
+            height: 100%;
+            @include sm-devices {
+                padding: 40px 50px;
+            }
+            @include lg-devices {
+                padding: 75px 100px;
+            }
+            @include xl-devices {
+                padding: 60px 30px;
+            }
+            @media (min-width: 1300px) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 60px 45px;
+            }
+
+            h1 {
+                margin-bottom: 35px;
+                @include xl-devices {
+                    font-size: 3.2rem;
+                    margin-bottom: 30px;
+                }
+                @media (min-width: 1360px) {
+                    font-size: 3.5rem;
+                }
+                @media (min-width: 1760px) {
+                    font-size: var(--heading__one);
+                    margin-bottom: 35px;
+                }
+            }
+            p {
+                @include xl-devices {
+                    font-size: 1rem;
+                }
+                @media (min-width: 1360px) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+    .smart-room-access {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+        .lead-text {
+            padding: 50px 30px;
+            
+            @include sm-devices {
+                padding: 80px 60px;
+            }
+            @include xl-devices {
+                padding: 80px 40px;
+            }
+            @include xxl-devices {
+                padding: 100px 40px;
+            }
+            @media (min-width: 1760px) {
+                padding: 120px 60px;
+            }
+
+            h1 {
+                @include xl-devices {
+                    font-size: 3.2rem;
+                }
+                @media (min-width: 1360px) {
+                    font-size: 3.5rem;
+                }
+                @media (min-width: 1760px) {
+                    font-size: var(--heading__one);
+                    line-height: 1.43;
+                }
+            }
+        }
+        .card_item {
+            .thumbnail {
+                background-size: cover;
+                background-position: center;
+                height: 100%;
+                img {
+                    opacity: 0;
+                }
+            }
+        }
+        .card-text {
+            border: 1px solid #E0E0E0;
+            padding: 40px 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include sm-devices {
+                padding: 50px 40px;
+            }
+
+            @include xxxl-devices {
+                padding: 80px 40px;
+            }
+
+            h4 {
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .smart-guest-access {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+        .image-group {
+            @include md-devices {
+                margin: 0 40px;
+            }
+            @include lg-devices {
+                margin: 0;
+            }
+            @media (min-width: 1760px) {
+                margin: 0 0 0 70px;
+            }
+        }
+        .text-content {
+            position: relative;
+            z-index: 1;
+            padding: 30px 25px;
+            
+            @include sm-devices {
+                padding: 45px;
+            }
+            @include md-devices {
+                padding: 45px 50px;
+            }
+            @include xl-devices {
+                padding: 0 30px 40px;
+            }
+            @media (min-width: 1760px) {
+                padding: 0 30px 50px 55px;
+            }
+
+            &::before {
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                position: absolute;
+                background-color: #F3F5F7;
+                z-index: -1;
+
+                @include xl-devices {
+                    top: 45px;
+                }
+                @media (min-width: 1760px) {
+                    top: 60px;
+                }
+            }
+            h1 {
+                margin-bottom: 30px;
+                @include xl-devices {
+                    font-size: 3.2rem;
+                }
+                @media (min-width: 1360px) {
+                    font-size: 3.5rem;
+                }
+                @media (min-width: 1760px) {
+                    font-size: var(--heading__one);
+                }
+            }
+            .button {
+                margin-top: 30px;
+                a {
+                    font-size: 15px;
+                    padding: 16px 18px;
+
+                    @include sm-devices {
+                        font-size: 16px;
+                    }
+                    @include md-devices {
+                        padding: 20px 25px;
+                    }
+                    @include xl-devices {
+                        padding: 22px 50px;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .smart-room-service {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+        .text-content {
+            @include xxl-devices {
+                margin-right: 30px;
+            }
+            h1 {
+                margin-bottom: 35px;
+
+                @include xl-devices {
+                    font-size: 3.2rem;
+                }
+                @media (min-width: 1360px) {
+                    font-size: 3.5rem;
+                }
+                @media (min-width: 1760px) {
+                    font-size: var(--heading__one);
+                }
+            }
+            .button {
+                margin-top: 30px;
+
+                @include xl-devices {
+                    margin-top: 35px;
+                }
+
+                a {
+                    padding: 16px 18px;
+                    font-size: 15px;
+
+                    @include sm-devices {
+                        font-size: 16px;
+                    }
+                    @include md-devices {
+                        padding: 20px 25px;
+                    }
+                    @include xl-devices {
+                        font-size: 18px;
+                        padding: 22px 50px;
+                    }
+                }
+            }
+        }
+        .image-group {
+            padding: 0 50px;
+            position: relative;
+            z-index: 1;
+            @include max-md {
+                display: none;
+            }
+            &::before {
+                content: '';
+                left: 20px;
+                right: 20px;
+                top: 50%;
+                height: 65%;
+                position: absolute;
+                background-color: #F3F5F7;
+                transform: translateY(-50%);
+                z-index: -1;
+            }
+        }
+    }
+    .smart-checkout {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+
+        .image-group {
+            @include max-md {
+                margin-top: 30px;
+            }
+        }
+        .text-content {
+            @include lg-devices {
+                padding: 0 0 0 25px;
+            }
+            @media (min-width: 1760px) {
+                padding: 0 65px;
+            }
+            h1 {
+                margin-bottom: 35px;
+
+                @include xl-devices {
+                    font-size: 3.2rem;
+                }
+                @media (min-width: 1360px) {
+                    font-size: 3.5rem;
+                }
+                @media (min-width: 1760px) {
+                    font-size: var(--heading__one);
+                }
+            }
+        }
+    }
+    .smart-dining {
+        margin: 100px 0;
+        
+        @include md-devices {
+            margin: 150px 0;
+        }
+        @include xl-devices {
+            margin: 180px 0;
+        }
+
+        .text-content {
+            padding: 30px 20px;
+            background-color: #F3F5F7;
+
+            @include sm-devices {
+                padding: 40px;
+            }
+            @include xl-devices {
+                padding: 50px;
+            }
+            @media (min-width: 1760px) {
+                padding: 60px 80px 60px 50px;
+            }
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            @include xl-devices {
+                font-size: 3.2rem;
+                margin-bottom: 15px;
+            }
+            @media (min-width: 1360px) {
+                font-size: 3.5rem;
+            }
+            @media (min-width: 1760px) {
+                font-size: var(--heading__one);
+            }
+        }
+        .button {
+            margin-top: 30px;
+
+            a {
+                font-size: 15px;
+                padding: 16px 18px;
+
+                @include md-devices {
+                    padding: 20px 25px;
+                    font-size: 16px;
+                }
+                @include xl-devices {
+                    font-size: 18px;
+                    padding: 22px 50px;
+                }
+            }
+        }
+    }
+}

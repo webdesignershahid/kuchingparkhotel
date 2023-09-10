@@ -1,0 +1,132 @@
+.gallery-wrapper {
+    margin: 100px 0;
+    @include xl-devices {
+        margin: 120px 0;
+    }
+    @include xxl-devices {
+        margin: 160px 0;
+    }
+
+    .video-gallery {
+        position: relative;
+        z-index: 1;
+        margin: 50px 0;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(#000, 0.2);
+        }
+        .play-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(#000, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 80px;
+                height: 80px;
+                display: block;
+                top: 50%;
+                left: 50%;
+                z-index: 0;
+                border: 2px solid #ffffff;
+                border-radius: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                animation: pulse-border 1500ms ease-out infinite;
+            }
+
+            i {
+                color: var(--color__white);
+                font-size: 24px;
+                position: relative;
+                left: 2px;
+            }
+        }
+
+        img {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+
+            @include lg-devices {
+                height: 400px;
+            }
+            @include xl-devices {
+                height: 430px;
+            }
+            @include xxl-devices {
+                height: 490px;
+            }
+        }
+    }
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 200px 200px 200px 200px;
+        gap: 10px;
+        
+        @include sm-devices {
+            gap: 15px;
+        }        
+        @include md-devices {
+            grid-template-rows: 300px 300px 300px 300px;
+            gap: 20px;
+        }
+        @include lg-devices {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        @include xl-devices {
+            grid-template-columns: repeat(4, 1fr);
+        }        
+        @include xxl-devices {
+            grid-template-rows: 360px 360px 360px 360px;
+        }
+        .item-3 {
+            @include xl-devices {
+                grid-column: 3 / 5;
+                grid-row: 1 / 3;
+            }
+        }
+        .item-4 {
+            @include xl-devices {
+                grid-row: 2 / 4;
+            }
+        }
+        .item-6 {
+            @include xl-devices {
+                grid-column: 2 / 4;
+            }
+        }
+        .item-10 {
+            @include xl-devices {
+                grid-column: 3 / 5;
+            }
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out 0s;
+        }
+        .gallery-item {
+            overflow: hidden;
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

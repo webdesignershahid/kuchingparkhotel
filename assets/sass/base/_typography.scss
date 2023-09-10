@@ -1,0 +1,29 @@
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: var(--font-secondary);
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: var(--font__line-height-body);
+	margin-top: 76px;
+
+	@include md-devices {
+		margin-top: 80px;
+	}
+
+	@include xl-devices {
+		margin-top: 110px;
+	}
+	@include xxl-devices {
+		margin-top: 125px;
+	}
+}
+
+@import 'colors';
+@import 'radius';
+@import 'copy';
+@import 'headings';
+@import 'section-title';
+

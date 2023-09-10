@@ -1,0 +1,12 @@
+.section-title {
+    margin-bottom: 30px;
+    
+    @include lg-devices {
+        margin-bottom: 75px;
+    }
+
+    .subtitle {
+        max-width: 1350px;
+        margin: 15px auto 0;
+    }
+}

@@ -1,0 +1,189 @@
+.contact-wrapper {
+    margin: 100px 0;
+
+    @include lg-devices {
+        margin: 120px 0 150px;
+    }
+    @include xxl-devices {
+        margin: 120px 0 180px;
+    }
+
+    .contact-inner {
+        background-color: #F3F5F7;
+       
+        .form-content {
+            padding: 35px 25px;
+
+            @include sm-devices {
+                padding: 50px;
+            }
+            @include lg-devices {
+                padding: 50px 0 50px 50px;
+            }
+            @include xl-devices {
+                padding: 75px;
+            }
+            h4 {
+                margin-bottom: 15px;
+                @include sm-devices {
+                    margin-bottom: 20px;
+                }
+            }
+            p {
+                max-width: 560px;
+            }
+
+            .contact-info {
+                margin: 10px 0 20px;
+                max-width: 460px;
+                @include sm-devices {
+                    margin: 20px 0 30px;
+                }
+                @include lg-devices {
+                    margin: 40px 0;
+                }
+                @include xl-devices {
+                    margin: 50px 0;
+                }
+                @include xxl-devices {
+                    margin-right: 50px 0 80px;
+                }
+                li {
+                    padding: 15px 10px;
+
+                    @include lg-devices {
+                        padding: 20px 15px;
+                    }
+
+                    & + li {
+                        border-top: 2px solid #E0E0E0;
+                    }
+
+                    [class*=fa-] {
+                        width: 50px;
+                        height: 50px;
+                        background-color: rgba(#2E878B, 0.08);
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #728A8A;
+                        font-size: 20px;
+                    }
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 0 10px;
+                        color: var(--color__black);
+                        font-size: 0.937rem;
+
+                        @include sm-devices {
+                            font-size: 1rem;
+                            gap: 0 15px;
+                        }
+                        @include lg-devices {
+                            font-size: 1.125rem;
+                            gap: 0 25px;
+                        }
+                        @include xl-devices {
+                            font-size: 1.25rem;
+                        }
+                    }
+                }
+            }
+            .hours {
+                display: inline-flex;
+                align-items: center;
+                gap: 0 20px;
+
+                @include sm-devices {
+                    gap: 0 40px;
+                }
+                @include xxl-devices {
+                    gap: 0 80px;
+                }
+
+                li {
+                    padding: 5px 0;
+                    position: relative;
+
+                    @include xxl-devices {
+                        & + li::before {
+                            content: '';
+                            position: absolute;
+                            left: -40px;
+                            top: 0;
+                            height: 100%;
+                            border-left: 2px solid #E0E0E0;
+                        }
+                    }
+                }
+
+                h6 {
+                    font-size: 18px;
+                    color: #728A8A;
+                    margin-bottom: 10px;
+                }
+                p {
+                    color: var(--color__black);
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .contact-form {
+            margin: 15px;
+            padding: 30px 15px;
+            background-color: var(--color__white);
+
+            @include xsm-devices {
+                margin: 25px;
+                padding: 25px;
+            }
+            @include sm-devices {
+                padding: 35px;
+            }
+            @media (min-width: 1760px) {
+                padding: 60px 70px;                
+            }
+            .input-group {
+                border: 1px solid #CED5D6;
+                margin-bottom: 15px;
+                transition: all 0.3s;
+                @include xl-devices {
+                    margin-bottom: 33px;
+                }
+                .form-control {
+                    border: 0;
+                    background-color: transparent;
+                    border-radius: 0;
+                    min-height: 65px;
+                    padding: 20px 20px;
+                    font-weight: 300;
+                }
+                span {
+                    background-color: transparent;
+                    border: 0;
+                    color: #728A8A;
+                    display: flex;
+                    align-items: center;
+                    padding: 20px;
+                    position: relative;
+                    padding: 0 20px;
+                    height: 40px;
+                    top: 15px;
+                    border-right: 1px solid #E0E0E0;
+                }
+                &:hover {
+                    border-color: var(--color__black);
+                }
+            }
+            .button {
+                @include max-md {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
